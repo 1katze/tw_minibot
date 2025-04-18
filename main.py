@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from flask import Flask
-from modules import get_random_word, throw_snowball, get_cat_fact
+from modules import get_random_word, throw_snowball, get_cat_fact, ball8
 
 # Создаём приложение Flask
 app = Flask(__name__)
@@ -22,6 +22,11 @@ def snejok():
 def cat_fact():
     fact = get_cat_fact()
     return fact
+
+@app.route('/8ball', methods=['GET'])
+def ball8():
+    message = ball8
+    return message
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)

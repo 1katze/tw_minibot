@@ -35,3 +35,49 @@ def get_cat_fact():
     with open("content/cats.txt", encoding="utf-8") as file:
         words = [line.strip() for line in file]
     return random.choice(words)
+
+def ball8():
+    messages = {
+        'positive': [
+            'определённо да YEPPERS',
+            'можешь быть уверен в этом YEPPERS',
+            'никаких сомнений YEPPERS',
+            'абсолютли YEPPERS',
+            'ну естественно YEPPERS',
+            'да YEPPERS'
+        ],
+        'probably': [
+            'хорошие шансы Nice',
+            'вероятнее всего Nice',
+            'думаю, что да Nice',
+            'не исключено Nice',
+            'немаловероятно Nice'
+        ],
+        'uncertainly': [
+            'пока не ясно think',
+            'не уверен think',
+            'тут всё не так однозначно think',
+            'скажу за небольшую сумму, MONEY',
+            'не стоит вскрывать эту тему think',
+            'может, @${random.chatter} знает точно? think',
+            'спроси у @${random.chatter} think'
+        ],
+        'improbably': [
+            'да нет, наверное heh',
+            'шансы не очень heh',
+            'скорее нет, чем да heh',
+            'я бы не надеялся heh'
+        ],
+        'negative': [
+            'даже не надейся NOPERS',
+            'весьма сомнительно NOPERS',
+            'определённо нет NOPERS',
+            'вероятность КРАЙНЕ мала NOPERS',
+            'никогда в жизни NOPERS',
+            'нет, просто нет NOPERS'
+        ]
+    }
+    random_key = random.choice(list(messages.keys()))
+    random_message = random.choice(messages[random_key])
+
+    return random_message
