@@ -25,7 +25,8 @@ def throw_snowball():
         "и разбил окно дома @${random.chatter} oh",
         "и удивил всех размером своего снежного кома. Словно в боулинге, ком сбивает несколько целей с ног "
                 + "@${random.chatter} " * random.randint(2, 4) + "SHTO",
-        "и оказалось, что это был @${random.chatter}. Он закинул его прямо в руки @${random.chatter} SHTO"
+        "и оказалось, что это был @${random.chatter}. Он закинул его прямо в руки @${random.chatter} SHTO",
+        "и тот растаял в полете. На улице слишком жарко, поэтому всего несколько капель воды попало на @${random.chatter} hot"
     ]
     return random.choice(messages)
 
