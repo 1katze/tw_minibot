@@ -24,8 +24,8 @@ def cat_fact():
     return fact
 
 @app.route('/8ball', methods=['GET'])
-def ball8():
-    message = ball8
+def _8ball():
+    message = ball8()
     return message
 
 if __name__ == '__main__':
