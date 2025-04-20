@@ -36,6 +36,7 @@ def get_cat_fact():
         words = [line.strip() for line in file]
     return random.choice(words)
 
+
 def ball8():
     messages = {
         'positive': [
@@ -57,7 +58,7 @@ def ball8():
             'пока не ясно think',
             'не уверен think',
             'тут всё не так однозначно think',
-            'скажу за небольшую сумму, MONEY',
+            'скажу за небольшую сумму MONEY',
             'не стоит вскрывать эту тему think',
             'может, @${random.chatter} знает точно? think',
             'спроси у @${random.chatter} think'
@@ -81,3 +82,21 @@ def ball8():
     random_message = random.choice(messages[random_key])
 
     return random_message
+
+
+def get_iq():
+    # Определим диапазоны и их веса
+    iq_ranges = {
+        1: (['Поздравляем, у вас 0! iq', '69 MHMM', '89 pivo', '228 TORCH', '322  rukopojatie',
+            '365, прямо как дней в году! EarthDay', '666 - да вы сам дьявол! devil', '777 - джекпот GAMBA',
+            'Мильон лишнего ику! umni', 'Бесконечность, ваш разум шире космоса! space'], ''),
+        5: (range(1, 69), 'Dumb'),
+        14: (range(70, 89), 'denied'),
+        50: (range(90, 120), 'ymom'),
+        20: (range(120, 150), 'pepeBigBrain'),
+        10: (range(150, 201), 'GalaxyBrain')
+    }
+
+    random_range, emote = random.choices(list(iq_ranges.values()), weights=list(iq_ranges.keys()))[0]
+    random_iq = random.choice(list(random_range))
+    return f'У вас... {random_iq} {emote}'

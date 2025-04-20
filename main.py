@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from flask import Flask
-from modules import get_random_word, throw_snowball, get_cat_fact, ball8
+from modules import get_random_word, throw_snowball, get_cat_fact, ball8, get_iq
 
 # Создаём приложение Flask
 app = Flask(__name__)
@@ -26,6 +26,11 @@ def cat_fact():
 @app.route('/8ball', methods=['GET'])
 def _8ball():
     message = ball8()
+    return message
+
+@app.route('/iq', methods=['GET'])
+def iq():
+    message = get_iq()
     return message
 
 if __name__ == '__main__':
